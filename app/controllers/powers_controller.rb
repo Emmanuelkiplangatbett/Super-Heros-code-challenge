@@ -10,7 +10,7 @@ rescue_from ActiveRecord::RecordNotFound, with: :rescue_from_not_found
     #get/power/id
     def show
         power=Power.find(params[:id])
-        render json: power
+        render json: power, status: :ok
     end
 
     #patch
@@ -28,7 +28,7 @@ rescue_from ActiveRecord::RecordNotFound, with: :rescue_from_not_found
     def power_params
         params.permit(:description)
     end
-
+    
     def rescue_from_record_invalid(invalid)
         render json: {errors:invalid.record.errors.full_messages},status: :unprocessable_entity
     end
