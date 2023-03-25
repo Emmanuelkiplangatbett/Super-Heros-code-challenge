@@ -17,7 +17,7 @@ rescue_from ActiveRecord::RecordNotFound, with: :rescue_from_not_found
     def update
         power=Power.find(params[:id])
         power.update!(power_params)
-        render json: power
+        render json: power, status: :accepted
     end
 
     private
