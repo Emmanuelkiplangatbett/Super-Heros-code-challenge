@@ -1,9 +1,9 @@
 class HerosController < ApplicationController
 rescue_from ActiveRecord::RecordNotFound, with: :rescue_from_not_found   
-    #get/all
+    #get/all/heroes
     def index
-        heros=Hero.all
-        render json: heros, status: :ok
+        heroes=Hero.all
+        render json: heroes, status: :ok
     end
 
     #get/hero/id
