@@ -15,11 +15,11 @@ A simple Superheroes Rails REST API that fetches heroes and their powers.
 
 ## Features
 - Get list of Superheroes
-> `GET /heros`
+> `GET /heroes`
 - Get list of powers
 > `GET /powers`
 - Get a specific hero
-> `GET /heros/:id`
+> `GET /heroes/:id`
 - Get a specific power
 > `GET /powers/:id`
 - Create a new hero's power

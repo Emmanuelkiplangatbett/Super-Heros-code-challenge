@@ -6,7 +6,7 @@ rescue_from ActiveRecord::RecordNotFound, with: :rescue_from_not_found
         render json: heroes, status: :ok
     end
 
-    #get/hero/id
+    #get/heroes/:id
     def show
         hero=Hero.find(params[:id])
         render json: hero, include: ["powers"], status: :ok
